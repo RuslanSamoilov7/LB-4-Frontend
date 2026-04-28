@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMarket</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #f7cdcd;
+            padding: 20px;
+            border-bottom: 3px solid #d99c9c;
+            text-align: center;
+        }
+        header nav a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+            color: #0000ff;
+        }
+        .main {
+            flex: 1;
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .catalog__title {
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff9900;
+        }
+
+        .catalog__grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            width: calc(25% - 19px);
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-color: #ff9900;
+        }
+        .product-card__title {
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .product-card__description {
+            color: #666;
+            margin: 5px 0;
+            font-style: italic;
+        }
+
+        .product-card__price {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .product-card__button {
+            background-color: #1a2b3c;
+            color: white;
+            border: 2px solid #0f1a24;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .product-card__button:hover {
+            background-color: #ff9900;
+            color: #1a2b3c;
+            border-color: #cc7a00;
+        }
+          footer {
+            border-top: 3px solid #d99c9c;
+            background-color: #f7cdcd;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            padding: 6px 10px;
+            text-decoration: none;
+            color: #2d2d3a;
+        }
+        footer a:hover {
+            text-decoration: underline;
+            color: #0000ff;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .product-card {
+                width: calc(33.333% - 17px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .product-card {
+                width: calc(50% - 13px);
+            }
+
+            .main {
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+
+            .header {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>TechMarket</h2>
+       <form>
+        <input type="search" size="40">
+        <button>Поиск</button>
+       </form> 
+       <nav>
+        <a href="#1">Главная</a>
+        <a href="#2">Каталог</a>
+        <a href="#3">О нас</a>
+        <a href="#3">Контакты</a>
+        <a href="#">Корзина</a>
+       </nav> 
+    </header>
+    <main class="main">
+        <h1 class="catalog__title">Каталог товаров</h1>
+        <div class="catalog__grid">
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/5cbace062696b0104c9c2f01cf18cc33/2258685cc32bbd96de406852bd9b2d94916029658cd6fa120a9f97a4bc0af297.jpg" alt="Aphone 15">
+                <div class="product-card__title">Смартфон Apple iPhone 15 128 ГБ черный</div>
+                <div class="product-card__description">ядер - 6x(3.46 ГГц), 6 ГБ, 1 SIM, Super Retina XDR, 2556x1179, камера 48+12 Мп, NFC, 5G, 4G, GPS, 3349 мА*ч</div>
+                <div class="product-card__price">55 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img height="300px" src="https://c.dns-shop.ru/thumb/st1/fit/320/250/f42c437e5268ca32d9e826a182fca4c6/3f07b1ffa9193a775d83d5a74fa818307037b9e0cf34e51a18ac31304fceefb9.jpg" alt="Aphone 17">
+                <div class="product-card__title">Смартфон Apple iPhone 17 Pro 256 ГБ серебристый</div>
+                <div class="product-card__description">ядер - 6, 12 ГБ, 1 SIM, Super Retina XDR, 2622x1206, камера 48+48+48 Мп, NFC, 5G, 4G, GPS, 3988 мА*ч</div>
+                <div class="product-card__price">126 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/dc8b6bf21e46a7ff504a56f4f9c4c59b/d242d02b93b30a304475ef2569e05a4b67123d1c80fec310082000dbb8f7995c.jpg" alt="Samsung A56">
+                <div class="product-card__title">Смартфон Samsung Galaxy A56 256 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(2.9 ГГц), 8 ГБ, 2 SIM, Super AMOLED, 2340x1080, камера 50+12+5 Мп, NFC, 5G, 4G, GPS, 5000 мА*ч</div>
+                <div class="product-card__price">34 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/a498bb45921c4fa14f9a7306cc050ce5/6c581baa45e073d1776c781eb859012169504723c2872d922b2e1d51706318c1.png" alt="Samsung">
+                <div class="product-card__title">Смартфон Samsung Galaxy S25 FE 512 ГБ черный</div>
+                <div class="product-card__description">Aядер - 10x(3.2 ГГц), 8 ГБ, 2 SIM, Dynamic AMOLED 2X, 2340x1080, камера 50+8+12 Мп, NFC, 5G, 4G, GPS, 4900 мА*ч</div>
+                <div class="product-card__price">54 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/7c7af1fd53020328b6cd042de74be0df/539c02698174dd7e2d504570e59645e05304008ed624b458162bd88fdff5578e.jpg" alt="Realme">
+                <div class="product-card__title">Смартфон realme Note 60x 64 ГБ черный </div>
+                <div class="product-card__description">ядер - 8x(1.82 ГГц), 3 ГБ, 2 SIM, IPS, 1600x720, камера 8+0.08 Мп, 4G, GPS, 5000 мА*ч</div>
+                <div class="product-card__price">7 499 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/c8fe4e7f61171783e1b0e847ab515500/51b9a65a9defc80e6ddb721ce53d6f4ba25200f930d41b4ecf753b2061f2b95c.jpg" alt="Honor">
+                <div class="product-card__title">Смартфон HONOR X6c 128 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(2 ГГц), 6 ГБ, 2 SIM, TFT LCD, 1604x720, камера 50+0.08 Мп, NFC, 4G, GPS, 5300 мА*ч</div>
+                <div class="product-card__price">11 990 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/32c86ef97ed5c8c3e2384252c8fd49a0/654064606cbd4d16509d73d586f803ff1bc150458ece42812f6e55aa073ca3b1.jpg" alt="Poco">
+                <div class="product-card__title">Смартфон POCO X7 Pro 512 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(3.25 ГГц), 12 ГБ, 2 SIM, AMOLED, 2712x1220, камера 50+8 Мп, NFC, 5G, 4G, GPS, 6000 мА*ч</div>
+                <div class="product-card__price">34 799 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/33b29dbd6be9bf433ab6085e6a7121c7/312e6a2dcaa89030fdc3119fc1cd7edb3426808af88ae92b92c5119646c9f6a1.jpg" alt="Samsung">
+                <div class="product-card__title">Смартфон Samsung Galaxy S25 Ultra 256 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(4.47 ГГц), 12 ГБ, 2 SIM, Dynamic AMOLED 2X, 3120x1440, камера 200+50+50+10 Мп, NFC, 5G, 4G, GPS, 5000 мА*ч</div>
+                <div class="product-card__price">104 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/cc8814f6fdccbdc8a808ffcc542b0223/bad602c43223f757f0de6e4f7492f44f1508062b17d690188bcae9cacc4b31fa.png" alt="Honor">
+                <div class="product-card__title"> Смартфон HONOR X9d 256 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(2.3 ГГц), 12 ГБ, 2 SIM, OLED, 2640x1200, камера 108+5 Мп, NFC, 5G, 4G, GPS, 8300 мА*ч</div>
+                <div class="product-card__price">35 999 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/fc3e0c96ca33e9a88faa4e9cb0ee72bf/28ff520d544d711e2ee9dd3fffd4be965dd7c898f715e7b182d3c388cd3c5be6.jpg" alt="Techo">
+                <div class="product-card__title">Смартфон Tecno POVA 7 Pro 5G 256 ГБ черный</div>
+                <div class="product-card__description">ядер - 8x(2.5 ГГц), 12 ГБ, 2 SIM, OLED, 2720x1224, камера 64+8 Мп, NFC, 5G, 4G, GPS, 6000 мА*ч</div>
+                <div class="product-card__price">22 599 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+            <div class="product-card">
+                <img  src="https://c.dns-shop.ru/thumb/st1/fit/320/250/43f1286e0a71171743a373d56444dbcd/eb7c91fad4ab7862ab7f353bc066f0a2b01d40dac49b5bfb2937e8708f46ac32.jpg" alt="Samsung">
+                <div class="product-card__title">Смартфон Samsung Galaxy A17 128 ГБ черный </div>
+                <div class="product-card__description">ядер - 8x(2.2 ГГц), 6 ГБ, 2 SIM, Super AMOLED, 2340x1080, камера 50+5+2 Мп, NFC, 4G, GPS, 5000 мА*ч</div>
+                <div class="product-card__price">15 499 ₽</div>
+                <button class="product-card__button">Добавить в корзину</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p id="3">Контакты: <a href="mailto: TechMarket@gmail.com">TechMarket@gmail.com</a>  <a href="tel: +89999999999"> 8 999 999 99 99</a></p>
+        <p>&copy; 2026 TechMarket. Все права защищены.</p>
+    </footer>
+</body>
+</html>

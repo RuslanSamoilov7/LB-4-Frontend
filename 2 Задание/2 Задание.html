@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .container {
+            max-width: 1200px;
+        }
+        .okna {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .article {
+            flex: 2;
+            padding: 24px;
+        }
+        .menu {
+            flex: 1;
+        }
+        .menu-block {
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .menu .menu-block:first-child {
+            margin-bottom: 20px;
+        }
+        .menu-block h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #0c2b4b;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #3498db;
+        }
+        .menu-block ul {
+            list-style: none;
+        }
+        .menu-block li {
+            padding: 6px 0;
+            color: #2980b9;
+        }
+        .menu-block p {
+            color: #666;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+        .article h1 {
+            font-size: 28px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+        .article h2 {
+            font-size: 22px;
+            margin: 20px 0 10px 0;
+            color: #1f2a3e;
+        }
+        .article p {
+            margin-bottom: 13px;
+            line-height: 1.5;
+            color: #1f2a3e;
+        }
+        @media (min-width: 600px) and (max-width: 800px) {
+            .okna {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .menu .menu-block:first-child {
+                margin-bottom: 0;
+            }
+
+            .menu-block {
+                flex: 1;
+            }
+        }
+        @media (max-width: 599px) {
+            .okna {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .menu .menu-block:first-child {
+                margin-bottom: 0;
+            }
+
+            .article {
+                padding: 16px;
+            }
+
+            .article h1 {
+                font-size: 24px;
+            }
+
+            .article h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="okna">
+          
+            <div class="article">
+                <h1>Introduction</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio inventore iste hic at dolor eveniet assumenda accusamus ratione porro veritatis cum recusandae eligendi consectetur, animi eum repudiandae quos perspiciatis minima.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio inventore iste hic at dolor eveniet assumenda accusamus ratione porro veritatis cum recusandae eligendi consectetur, animi eum repudiandae quos perspiciatis minima.</p>
+                <h2> Additional information</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quaerat!
+                Sit molestiae aspernatur accusamus voluptas exercitationem cumque nobis commodi unde!
+                Ab esse itaque consequatur facilis consectetur, quae rerum dolores ipsum?
+                Ducimus possimus provident dolorem perferendis natus accusamus consequatur, odit delectus?
+                Sed quos modi pariatur, nobis repudiandae sapiente excepturi velit dolor?
+                Unde repudiandae autem reiciendis laudantium quia sunt sit ad iusto?
+                Ullam omnis enim asperiores aliquam nisi voluptatum ipsa repellat nostrum.
+                Nam aperiam voluptas enim ullam sed aspernatur aliquid aliquam non.
+                Velit quia magnam eum debitis distinctio quod exercitationem, accusantium consequuntur?
+                Rerum soluta ullam doloremque incidunt doloribus commodi pariatur ipsam dignissimos.</p>
+            <p>Lorem ipsum dolor sit amet.
+            Asperiores hic voluptatum soluta consectetur.
+            Asperiores itaque corrupti maiores nemo?
+            Expedita velit nemo eius error?
+            Exercitationem rem possimus obcaecati minima?
+            Iure impedit dolores facilis maiores.
+            Corporis aperiam sapiente quia id.
+            Voluptatum alias officia vero ab.
+            Voluptas et quam dolor corrupti!
+            Voluptate tenetur quis quo sit!</p>
+            </div>
+            <div class="menu">
+                <div class="menu-block">
+                    <h3> Actions</h3>
+                    <ul>
+                        <li>Integer ut manga cursus eros</li>
+                        <li>Fucse imperdiet sapien a sem</li>
+                        <li>Sed ac ligula in neque tincidunt</li>
+                    </ul> 
+                </div>
+                <div class="menu-block">
+                    <h3>Plans</h3>
+                    <ul>
+                        <li>Morbi at diam suscipit mauris</li>
+                        <li>Donec vel odio malesuad</li>
+                    </ul>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

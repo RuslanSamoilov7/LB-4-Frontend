@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .card {
+            background-color: #014242;
+            display: flex;
+            flex-direction: column;
+            max-width: 1000px;
+            max-height: 500px;
+
+        }
+
+        h6 {
+            display: flex;
+            font-weight: 300;
+            color: gray;
+            margin: 25px;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            color: white;
+            margin: 25px;
+            font-size: 28.8px;  
+        }
+
+        img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin: 25px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .info-col1, .info-col2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .info span {
+            display: inline-block;
+            margin: 5px;
+        }
+
+        h5 {
+            color: white;
+            font-weight: 200;
+            margin-top: 0;
+            margin-left: 25px;
+        }
+
+        @media (max-width: 600px) {
+
+            .info-col1 {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .info-col2 {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+            }
+
+            .info-col1 h6, .info-col2 h6, .info-col1 h5, .info-col2 h5 {
+                margin: 0;
+            }
+
+            h1 {
+                margin: 20px 25px;
+                font-size: 24px;  
+            }
+
+        }
+  
+</style>
+<body>
+     <div class="card">
+    
+    <h6>Home / Articles /</h6>
+    
+    <h1>The Difference Between Responsive and Adaptive Design</h1>
+    
+    <div class="content-row">
+      
+      <div class="info-wrapper">
+        <div class="info">
+            <img src="image1.png" alt="Avatar">
+            
+          <div class="info-col1">
+            
+            <h6>
+              <span style="color: #9bb3b3;">Updated</span>
+              <span style="color: #d4e4e4; margin-left: 8px;">Nov 17, 2018</span>
+            </h6>
+            
+            <h6>
+              <span style="color: #9bb3b3;">49 Comments</span>
+              <span style="color: #d4e4e4; margin-left: 8px;">Go to comments</span>
+            </h6>
+          </div>
+          
+          <div class="info-col2">
+            <h6>
+              <span style="color: #9bb3b3;">Author</span>
+              <span style="color: #d4e4e4; margin-left: 8px;">Geoff Graham</span>
+            </h6>
+            
+            <h6>
+              <span style="color: #9bb3b3;">Published</span>
+              <span style="color: #d4e4e4; margin-left: 8px;">Nov 11, 2018</span>
+            </h6>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>
